@@ -37,4 +37,4 @@ You can see [The Provided Example](https://github.com/mohammed-salah-zidane/Swif
 
 ## License
 
-SwiftyNet is released under an MIT license. See [License.md](https://github.com/Moya/Moya/blob/master/License.md) for more information.
+SwiftyNet is released under an MIT license. See [License.md](https://github.com/mohammed-salah-zidane/SwiftyNet/blob/main/LICENSE) for more information.
