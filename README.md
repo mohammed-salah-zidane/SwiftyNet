@@ -1,6 +1,5 @@
 # SwiftyNet 1.0.0
-A generic network layer written in swift
-An abstraction layer above Alamofire
+A generic network layer written in swift. you can use it as an abstraction layer above Alamofire with generic returned types
 
 ## Installation
 ### CocoaPods
