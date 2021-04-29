@@ -12,6 +12,7 @@
 		FA0DFA0D263A55BF00D80905 /* SwiftyNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0DFA03263A55BF00D80905 /* SwiftyNet.framework */; };
 		FA0DFA12263A55BF00D80905 /* SwiftyNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFA11263A55BF00D80905 /* SwiftyNetTests.swift */; };
 		FA0DFA14263A55BF00D80905 /* SwiftyNet.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0DFA06263A55BF00D80905 /* SwiftyNet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA0DFAC8263A646200D80905 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFAC7263A646200D80905 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		FA0DFA0C263A55BF00D80905 /* SwiftyNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0DFA11263A55BF00D80905 /* SwiftyNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyNetTests.swift; sourceTree = "<group>"; };
 		FA0DFA13263A55BF00D80905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0DFAC7263A646200D80905 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		FB62E228CBA41AFC9DCB837A /* Pods_SwiftyNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 		FA0DFA05263A55BF00D80905 /* SwiftyNet */ = {
 			isa = PBXGroup;
 			children = (
+				FA0DFAC6263A646200D80905 /* SessionManager */,
 				FA0DFA06263A55BF00D80905 /* SwiftyNet.h */,
 				FA0DFA07263A55BF00D80905 /* Info.plist */,
 			);
@@ -105,6 +108,14 @@
 				FA0DFA13263A55BF00D80905 /* Info.plist */,
 			);
 			path = SwiftyNetTests;
+			sourceTree = "<group>";
+		};
+		FA0DFAC6263A646200D80905 /* SessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA0DFAC7263A646200D80905 /* SessionManager.swift */,
+			);
+			path = SessionManager;
 			sourceTree = "<group>";
 		};
 		FF8C3A5E80ABF8CBF5DA3471 /* Pods */ = {
@@ -294,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0DFAC8263A646200D80905 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 931E7A183DD40C0A5A5C9C2D /* Pods-SwiftyNet-SwiftyNetTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX9AC3J6FG;
 				INFOPLIST_FILE = SwiftyNetTests/Info.plist;
@@ -514,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 878833DF1D0622D34E561416 /* Pods-SwiftyNet-SwiftyNetTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX9AC3J6FG;
 				INFOPLIST_FILE = SwiftyNetTests/Info.plist;
