@@ -13,6 +13,9 @@
 		FA0DFA12263A55BF00D80905 /* SwiftyNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFA11263A55BF00D80905 /* SwiftyNetTests.swift */; };
 		FA0DFA14263A55BF00D80905 /* SwiftyNet.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0DFA06263A55BF00D80905 /* SwiftyNet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA0DFAC8263A646200D80905 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFAC7263A646200D80905 /* SessionManager.swift */; };
+		FA0DFAD1263A648D00D80905 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFACE263A648D00D80905 /* NetworkResponse.swift */; };
+		FA0DFAD2263A648D00D80905 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFACF263A648D00D80905 /* NetworkRequest.swift */; };
+		FA0DFAD3263A648D00D80905 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFAD0263A648D00D80905 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		FA0DFA11263A55BF00D80905 /* SwiftyNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyNetTests.swift; sourceTree = "<group>"; };
 		FA0DFA13263A55BF00D80905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0DFAC7263A646200D80905 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		FA0DFACE263A648D00D80905 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		FA0DFACF263A648D00D80905 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		FA0DFAD0263A648D00D80905 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FB62E228CBA41AFC9DCB837A /* Pods_SwiftyNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,6 +100,7 @@
 		FA0DFA05263A55BF00D80905 /* SwiftyNet */ = {
 			isa = PBXGroup;
 			children = (
+				FA0DFACD263A648D00D80905 /* Support */,
 				FA0DFAC6263A646200D80905 /* SessionManager */,
 				FA0DFA06263A55BF00D80905 /* SwiftyNet.h */,
 				FA0DFA07263A55BF00D80905 /* Info.plist */,
@@ -116,6 +123,16 @@
 				FA0DFAC7263A646200D80905 /* SessionManager.swift */,
 			);
 			path = SessionManager;
+			sourceTree = "<group>";
+		};
+		FA0DFACD263A648D00D80905 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FA0DFACE263A648D00D80905 /* NetworkResponse.swift */,
+				FA0DFACF263A648D00D80905 /* NetworkRequest.swift */,
+				FA0DFAD0263A648D00D80905 /* NetworkError.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		FF8C3A5E80ABF8CBF5DA3471 /* Pods */ = {
@@ -306,6 +323,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0DFAC8263A646200D80905 /* SessionManager.swift in Sources */,
+				FA0DFAD3263A648D00D80905 /* NetworkError.swift in Sources */,
+				FA0DFAD2263A648D00D80905 /* NetworkRequest.swift in Sources */,
+				FA0DFAD1263A648D00D80905 /* NetworkResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
