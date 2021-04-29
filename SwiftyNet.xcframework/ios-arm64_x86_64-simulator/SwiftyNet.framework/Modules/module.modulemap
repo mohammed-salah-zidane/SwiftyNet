@@ -1,0 +1,11 @@
+framework module SwiftyNet {
+  umbrella header "SwiftyNet.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftyNet.Swift {
+    header "SwiftyNet-Swift.h"
+    requires objc
+}
