@@ -1,9 +1,6 @@
-# SwiftyNet
+# SwiftyNet 1.0.0
 A generic network layer written in swift
 An abstraction layer above Alamofire
-
-
-# SwiftyNet 1.0.0
 
 ## Installation
 ### CocoaPods
