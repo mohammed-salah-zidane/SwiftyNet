@@ -498,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EBDEABA3B378766CBD5F5ED9 /* Pods-SwiftyNet.debug.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -525,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA7472F10E6C6B762A378700 /* Pods-SwiftyNet.release.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

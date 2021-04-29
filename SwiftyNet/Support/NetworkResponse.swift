@@ -9,13 +9,13 @@ import Foundation
 import Alamofire
 
 /// The response from a method that can result in either a successful or failed state
-typealias DataResponseType  = AFDataResponse<Any>
+public typealias DataResponseType  = AFDataResponse<Any>
 
 public enum NetworkResponse<T: Codable> {
     case success(data: T)
     case failure(NetworkError)
     
-    init(_ dataResponse: DataResponseType) {
+    public init(_ dataResponse: DataResponseType) {
         
         guard dataResponse.error == nil else {
             self = .failure(NetworkError(dataResponse.error!))

@@ -8,38 +8,31 @@
 import Foundation
 import Alamofire
 
-protocol Excutable: class {
+public protocol Excutable: class {
     typealias OnProgressCallback = (CFloat) -> ()
     
-    func request<T: Codable>(request: NetworkRequest,
+    func request<T: Codable>(targetRequest: NetworkRequest,
+                             responseObject: T.Type,
                              complation: @escaping (NetworkResponse<T>)->())
     
-    func requestMultipart<T>(request: NetworkRequest,
+    func requestMultipart<T>(targetRequest: NetworkRequest,
+                             responseObject: T.Type,
                              complation: @escaping (NetworkResponse<T>)->(),
                              onProgress: OnProgressCallback?)
 }
 
 /// Used to connect to any JSON API that is modeled by an AlamofireEndpoint
-final class NetworkRouter: Excutable {
-    
-    /**
-     Initialize a shared object with a DispatchQueue.global(qos: .userInitiated)
-     - use this shared object in loading Api Request
-     
-     */
-    public static var shared: NetworkRouter {
-        let manger = NetworkRouter(queue: DispatchQueue.global(qos: .userInitiated))
-        return manger
-    }
+public final class NetworkRouter: Excutable {
     
     private var queue: DispatchQueue = DispatchQueue.global(qos: .userInitiated)
     
-    private init(queue: DispatchQueue) {
-        self.queue = queue
+    public init() {
+    
     }
     
-    func request<T: Codable> (
-        request: NetworkRequest,
+    public func request<T: Codable> (
+        targetRequest: NetworkRequest,
+        responseObject: T.Type,
         complation _complation: @escaping (NetworkResponse<T>)->()
     ) {
         
@@ -49,7 +42,7 @@ final class NetworkRouter: Excutable {
 
         ApiSessionManager
             .sessionManager
-            .request(request)
+            .request(targetRequest)
             .validate()
             .responseJSON
             { (responce) in
@@ -58,8 +51,9 @@ final class NetworkRouter: Excutable {
     }
     
     
-    func requestMultipart<T: Codable> (
-        request: NetworkRequest,
+    public func requestMultipart<T: Codable> (
+        targetRequest: NetworkRequest,
+        responseObject: T.Type,
         complation _complation: @escaping (NetworkResponse<T>)->(),
         onProgress _onProgress: OnProgressCallback? = nil
     ) {
@@ -76,15 +70,15 @@ final class NetworkRouter: Excutable {
             ApiSessionManager
                 .sessionManager
                 .upload(multipartFormData: { (multipartFormData) in
-                    if let parameters = request.parameters {
+                    if let parameters = targetRequest.parameters {
                         for (key, value) in parameters{
                             multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: "\(key)")
                         }
                     }
-                    request.multiPart?.forEach({ (multipart) in
+                    targetRequest.multiPart?.forEach({ (multipart) in
                         multipartFormData.append(multipart.fileData, withName: multipart.fileName, fileName: multipart.fileData.format.fileName, mimeType: multipart.fileData.format.mimeType)
                     })
-                },with: request).responseJSON(completionHandler: { (response) in
+                },with: targetRequest).responseJSON(completionHandler: { (response) in
                     switch response.result {
                     case .success:
                         complation(NetworkResponse(response))

@@ -49,7 +49,7 @@ extension NetworkRequest {
         return nil
     }
     
-    func asURLRequest() throws -> URLRequest {
+    public func asURLRequest() throws -> URLRequest {
         let url = try (baseUrl).asURL()
         var urlRequest = URLRequest(url: pathContainsHost ? URL(string: path)! : url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
@@ -80,7 +80,7 @@ public enum RequestParameterEncoding: String {
     // queryString means you send paramter in => Params "Postman"
     case queryString, httpBody, json
     
-    var encoding: ParameterEncoding {
+    public var encoding: ParameterEncoding {
         switch self {
         case .queryString:
             return URLEncoding.queryString
