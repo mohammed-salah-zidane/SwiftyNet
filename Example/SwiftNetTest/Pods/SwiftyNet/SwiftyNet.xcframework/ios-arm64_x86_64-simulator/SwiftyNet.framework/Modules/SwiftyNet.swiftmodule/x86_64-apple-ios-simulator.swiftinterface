@@ -1,0 +1,113 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SwiftyNet
+import Alamofire
+import Foundation
+import Swift
+@_exported import SwiftyNet
+public protocol Excutable : AnyObject {
+  typealias OnProgressCallback = (Swift.CFloat) -> ()
+  func request<T, M>(targetRequest: M, responseObject: T.Type, complation: @escaping (SwiftyNet.NetworkResponse<T>) -> ()) where T : Swift.Decodable, T : Swift.Encodable, M : SwiftyNet.NetworkRequest
+  func requestMultipart<T, M>(targetRequest: M, responseObject: T.Type, complation: @escaping (SwiftyNet.NetworkResponse<T>) -> (), onProgress: Self.OnProgressCallback?) where T : Swift.Decodable, T : Swift.Encodable, M : SwiftyNet.NetworkRequest
+}
+final public class NetworkRouter : SwiftyNet.Excutable {
+  public init()
+  final public func request<T, M>(targetRequest: M, responseObject: T.Type, complation _complation: @escaping (SwiftyNet.NetworkResponse<T>) -> ()) where T : Swift.Decodable, T : Swift.Encodable, M : SwiftyNet.NetworkRequest
+  final public func requestMultipart<T, M>(targetRequest: M, responseObject: T.Type, complation _complation: @escaping (SwiftyNet.NetworkResponse<T>) -> (), onProgress _onProgress: SwiftyNet.NetworkRouter.OnProgressCallback? = nil) where T : Swift.Decodable, T : Swift.Encodable, M : SwiftyNet.NetworkRequest
+  @objc deinit
+}
+public enum NetworkError : Swift.Error {
+  case badJSON
+  case noConnection
+  case noData
+  case notAuthenticated
+  case forbidden
+  case notFound
+  case serverError
+  case timeout
+  case conflict
+  case unknownError
+  case parsingJSONError
+  case errorMessage(text: Swift.String)
+}
+extension NetworkError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum MimeTypeSignatures {
+  case jpeg
+  case png
+  case gif
+  case pdf
+  case tiff
+  case video
+  case vnd
+  case text
+  public static func == (a: SwiftyNet.MimeTypeSignatures, b: SwiftyNet.MimeTypeSignatures) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct MultipartData {
+}
+public protocol NetworkRequest : Alamofire.URLRequestConvertible {
+  var path: Swift.String { get }
+  var pathContainsHost: Swift.Bool { get }
+  var baseUrl: Foundation.URL { get }
+  var method: Alamofire.HTTPMethod { get }
+  var parameters: Alamofire.Parameters? { get }
+  var parameterEncoding: SwiftyNet.RequestParameterEncoding? { get }
+  var headers: [Swift.String : Any]? { get }
+  var dataType: SwiftyNet.DataType { get }
+  var multiPart: [SwiftyNet.MultipartData]? { get }
+}
+extension NetworkRequest {
+  public var pathContainsHost: Swift.Bool {
+    get
+  }
+  public var headers: [Swift.String : Any]? {
+    get
+  }
+  public var dataType: SwiftyNet.DataType {
+    get
+  }
+  public var multiPart: [SwiftyNet.MultipartData]? {
+    get
+  }
+  public func asURLRequest() throws -> Foundation.URLRequest
+}
+public enum RequestParameterEncoding : Swift.String {
+  case queryString, httpBody, json
+  public var encoding: Alamofire.ParameterEncoding {
+    get
+  }
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DataType {
+  case JSON
+  case data
+  public static func == (a: SwiftyNet.DataType, b: SwiftyNet.DataType) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public typealias DataResponseType = Alamofire.AFDataResponse<Any>
+public enum NetworkResponse<T> where T : Swift.Decodable, T : Swift.Encodable {
+  case success(data: T)
+  case failure(SwiftyNet.NetworkError)
+  public init(_ dataResponse: SwiftyNet.DataResponseType)
+}
+extension SwiftyNet.MimeTypeSignatures : Swift.Equatable {}
+extension SwiftyNet.MimeTypeSignatures : Swift.Hashable {}
+extension SwiftyNet.RequestParameterEncoding : Swift.Equatable {}
+extension SwiftyNet.RequestParameterEncoding : Swift.Hashable {}
+extension SwiftyNet.RequestParameterEncoding : Swift.RawRepresentable {}
+extension SwiftyNet.DataType : Swift.Equatable {}
+extension SwiftyNet.DataType : Swift.Hashable {}

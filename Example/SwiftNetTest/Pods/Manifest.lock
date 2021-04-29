@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (5.4.1)
+  - SwiftyNet (1.0.0):
+    - Alamofire
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftyNet (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftyNet
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  SwiftyNet: 13aee8808cac85264f455568fc87058f6beaf75d
+
+PODFILE CHECKSUM: 8ac4b891d54649d85f3caba10afa153a24f19c70
+
+COCOAPODS: 1.10.0
