@@ -11,14 +11,16 @@ import Alamofire
 public protocol Excutable: class {
     typealias OnProgressCallback = (CFloat) -> ()
     
-    func request<T: Codable>(targetRequest: NetworkRequest,
-                             responseObject: T.Type,
-                             complation: @escaping (NetworkResponse<T>)->())
+    func request<T: Codable, M: NetworkRequest>(
+        targetRequest: M,
+        responseObject: T.Type,
+        complation: @escaping (NetworkResponse<T>)->())
     
-    func requestMultipart<T>(targetRequest: NetworkRequest,
-                             responseObject: T.Type,
-                             complation: @escaping (NetworkResponse<T>)->(),
-                             onProgress: OnProgressCallback?)
+    func requestMultipart<T: Codable, M: NetworkRequest> (
+        targetRequest: M,
+        responseObject: T.Type,
+        complation: @escaping (NetworkResponse<T>)->(),
+        onProgress: OnProgressCallback?)
 }
 
 /// Used to connect to any JSON API that is modeled by an AlamofireEndpoint
@@ -30,8 +32,8 @@ public final class NetworkRouter: Excutable {
     
     }
     
-    public func request<T: Codable> (
-        targetRequest: NetworkRequest,
+    public func request<T: Codable, M: NetworkRequest> (
+        targetRequest: M,
         responseObject: T.Type,
         complation _complation: @escaping (NetworkResponse<T>)->()
     ) {
@@ -51,8 +53,8 @@ public final class NetworkRouter: Excutable {
     }
     
     
-    public func requestMultipart<T: Codable> (
-        targetRequest: NetworkRequest,
+    public func requestMultipart<T: Codable, M: NetworkRequest> (
+        targetRequest: M,
         responseObject: T.Type,
         complation _complation: @escaping (NetworkResponse<T>)->(),
         onProgress _onProgress: OnProgressCallback? = nil

@@ -29,6 +29,7 @@ final class ApiSessionManager: NSObject {
         manager = nil
         // it will automaticaly invalidateAndCancel()
     }
+    
     deinit {
         ApiSessionManager.cancelAllRequests()
     }

@@ -17,10 +17,10 @@ public enum NetworkResponse<T: Codable> {
     
     public init(_ dataResponse: DataResponseType) {
         
+        print("Response Body : ", try? dataResponse.result.get() ,dataResponse.request)
+
         guard dataResponse.error == nil else {
             self = .failure(NetworkError(dataResponse.error!))
-            print(dataResponse)
-
             return
         }
         
