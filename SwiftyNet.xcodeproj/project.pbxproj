@@ -17,6 +17,7 @@
 		FA0DFAD2263A648D00D80905 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFACF263A648D00D80905 /* NetworkRequest.swift */; };
 		FA0DFAD3263A648D00D80905 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFAD0263A648D00D80905 /* NetworkError.swift */; };
 		FA0DFAD8263A64EE00D80905 /* NetworkExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFAD7263A64EE00D80905 /* NetworkExecutor.swift */; };
+		FA0DFADD263A650600D80905 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFADC263A650600D80905 /* Data+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		FA0DFACF263A648D00D80905 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		FA0DFAD0263A648D00D80905 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FA0DFAD7263A64EE00D80905 /* NetworkExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkExecutor.swift; sourceTree = "<group>"; };
+		FA0DFADC263A650600D80905 /* Data+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		FB62E228CBA41AFC9DCB837A /* Pods_SwiftyNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 		FA0DFA05263A55BF00D80905 /* SwiftyNet */ = {
 			isa = PBXGroup;
 			children = (
+				FA0DFADB263A650600D80905 /* Extensions */,
 				FA0DFAD6263A64EE00D80905 /* Executer */,
 				FA0DFACD263A648D00D80905 /* Support */,
 				FA0DFAC6263A646200D80905 /* SessionManager */,
@@ -144,6 +147,14 @@
 				FA0DFAD7263A64EE00D80905 /* NetworkExecutor.swift */,
 			);
 			path = Executer;
+			sourceTree = "<group>";
+		};
+		FA0DFADB263A650600D80905 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA0DFADC263A650600D80905 /* Data+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FF8C3A5E80ABF8CBF5DA3471 /* Pods */ = {
@@ -336,6 +347,7 @@
 				FA0DFAD8263A64EE00D80905 /* NetworkExecutor.swift in Sources */,
 				FA0DFAC8263A646200D80905 /* SessionManager.swift in Sources */,
 				FA0DFAD3263A648D00D80905 /* NetworkError.swift in Sources */,
+				FA0DFADD263A650600D80905 /* Data+Extensions.swift in Sources */,
 				FA0DFAD2263A648D00D80905 /* NetworkRequest.swift in Sources */,
 				FA0DFAD1263A648D00D80905 /* NetworkResponse.swift in Sources */,
 			);
