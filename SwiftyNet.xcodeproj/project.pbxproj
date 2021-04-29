@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B10F74C4CCBA7BA7BED75B3 /* Pods_SwiftyNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB62E228CBA41AFC9DCB837A /* Pods_SwiftyNet.framework */; };
+		6A3BF517FBA7A6EF5384062F /* Pods_SwiftyNet_SwiftyNetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D162FDBABA877FA5FAA134 /* Pods_SwiftyNet_SwiftyNetTests.framework */; };
 		FA0DFA0D263A55BF00D80905 /* SwiftyNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0DFA03263A55BF00D80905 /* SwiftyNet.framework */; };
 		FA0DFA12263A55BF00D80905 /* SwiftyNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DFA11263A55BF00D80905 /* SwiftyNetTests.swift */; };
 		FA0DFA14263A55BF00D80905 /* SwiftyNet.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0DFA06263A55BF00D80905 /* SwiftyNet.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,12 +25,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85D162FDBABA877FA5FAA134 /* Pods_SwiftyNet_SwiftyNetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyNet_SwiftyNetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		878833DF1D0622D34E561416 /* Pods-SwiftyNet-SwiftyNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyNet-SwiftyNetTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftyNet-SwiftyNetTests/Pods-SwiftyNet-SwiftyNetTests.release.xcconfig"; sourceTree = "<group>"; };
+		931E7A183DD40C0A5A5C9C2D /* Pods-SwiftyNet-SwiftyNetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyNet-SwiftyNetTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyNet-SwiftyNetTests/Pods-SwiftyNet-SwiftyNetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA7472F10E6C6B762A378700 /* Pods-SwiftyNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyNet.release.xcconfig"; path = "Target Support Files/Pods-SwiftyNet/Pods-SwiftyNet.release.xcconfig"; sourceTree = "<group>"; };
+		EBDEABA3B378766CBD5F5ED9 /* Pods-SwiftyNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyNet.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyNet/Pods-SwiftyNet.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0DFA03263A55BF00D80905 /* SwiftyNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0DFA06263A55BF00D80905 /* SwiftyNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyNet.h; sourceTree = "<group>"; };
 		FA0DFA07263A55BF00D80905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0DFA0C263A55BF00D80905 /* SwiftyNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0DFA11263A55BF00D80905 /* SwiftyNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyNetTests.swift; sourceTree = "<group>"; };
 		FA0DFA13263A55BF00D80905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB62E228CBA41AFC9DCB837A /* Pods_SwiftyNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B10F74C4CCBA7BA7BED75B3 /* Pods_SwiftyNet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0DFA0D263A55BF00D80905 /* SwiftyNet.framework in Frameworks */,
+				6A3BF517FBA7A6EF5384062F /* Pods_SwiftyNet_SwiftyNetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9ECA4CF2209883531BC22956 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB62E228CBA41AFC9DCB837A /* Pods_SwiftyNet.framework */,
+				85D162FDBABA877FA5FAA134 /* Pods_SwiftyNet_SwiftyNetTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA0DF9F9263A55BF00D80905 = {
 			isa = PBXGroup;
 			children = (
 				FA0DFA05263A55BF00D80905 /* SwiftyNet */,
 				FA0DFA10263A55BF00D80905 /* SwiftyNetTests */,
 				FA0DFA04263A55BF00D80905 /* Products */,
+				FF8C3A5E80ABF8CBF5DA3471 /* Pods */,
+				9ECA4CF2209883531BC22956 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +107,17 @@
 			path = SwiftyNetTests;
 			sourceTree = "<group>";
 		};
+		FF8C3A5E80ABF8CBF5DA3471 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBDEABA3B378766CBD5F5ED9 /* Pods-SwiftyNet.debug.xcconfig */,
+				EA7472F10E6C6B762A378700 /* Pods-SwiftyNet.release.xcconfig */,
+				931E7A183DD40C0A5A5C9C2D /* Pods-SwiftyNet-SwiftyNetTests.debug.xcconfig */,
+				878833DF1D0622D34E561416 /* Pods-SwiftyNet-SwiftyNetTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,6 +136,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA0DFA17263A55BF00D80905 /* Build configuration list for PBXNativeTarget "SwiftyNet" */;
 			buildPhases = (
+				574DA7ACD47FCA4BB193FAE2 /* [CP] Check Pods Manifest.lock */,
 				FA0DF9FE263A55BF00D80905 /* Headers */,
 				FA0DF9FF263A55BF00D80905 /* Sources */,
 				FA0DFA00263A55BF00D80905 /* Frameworks */,
@@ -122,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA0DFA1A263A55BF00D80905 /* Build configuration list for PBXNativeTarget "SwiftyNetTests" */;
 			buildPhases = (
+				EE581E49240EEB80067B0320 /* [CP] Check Pods Manifest.lock */,
 				FA0DFA08263A55BF00D80905 /* Sources */,
 				FA0DFA09263A55BF00D80905 /* Frameworks */,
 				FA0DFA0A263A55BF00D80905 /* Resources */,
+				42D35412DD46D71BC8002379 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +182,7 @@
 				TargetAttributes = {
 					FA0DFA02263A55BF00D80905 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					FA0DFA0B263A55BF00D80905 = {
 						CreatedOnToolsVersion = 12.4;
@@ -188,6 +224,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42D35412DD46D71BC8002379 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftyNet-SwiftyNetTests/Pods-SwiftyNet-SwiftyNetTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftyNet-SwiftyNetTests/Pods-SwiftyNet-SwiftyNetTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftyNet-SwiftyNetTests/Pods-SwiftyNet-SwiftyNetTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		574DA7ACD47FCA4BB193FAE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftyNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE581E49240EEB80067B0320 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftyNet-SwiftyNetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA0DF9FF263A55BF00D80905 /* Sources */ = {
@@ -340,7 +440,9 @@
 		};
 		FA0DFA18263A55BF00D80905 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBDEABA3B378766CBD5F5ED9 /* Pods-SwiftyNet.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QX9AC3J6FG;
@@ -357,6 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zidane.SwiftyNet;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,7 +467,9 @@
 		};
 		FA0DFA19263A55BF00D80905 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA7472F10E6C6B762A378700 /* Pods-SwiftyNet.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QX9AC3J6FG;
@@ -388,6 +493,7 @@
 		};
 		FA0DFA1B263A55BF00D80905 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931E7A183DD40C0A5A5C9C2D /* Pods-SwiftyNet-SwiftyNetTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX9AC3J6FG;
@@ -406,6 +512,7 @@
 		};
 		FA0DFA1C263A55BF00D80905 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 878833DF1D0622D34E561416 /* Pods-SwiftyNet-SwiftyNetTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX9AC3J6FG;
